@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControladorBiblioteca">
+   <children>
+      <TabPane prefHeight="474.0" prefWidth="562.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Editora">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="99.0" layoutY="93.0" prefHeight="260.0" prefWidth="365.0">
+                           <children>
+                              <Label fx:id="labelEditoraDados" layoutX="62.0" layoutY="48.0" text="Dados da Editora" />
+                              <TextField fx:id="textEditoraNome" layoutX="107.0" layoutY="96.0" prefHeight="34.0" prefWidth="245.0" />
+                              <Label fx:id="labelEditoraNome" layoutX="62.0" layoutY="105.0" text="Nome:" />
+                              <Button fx:id="buttonEditoraIncluir" layoutX="45.0" layoutY="170.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Incluir" />
+                              <Button fx:id="buttonEditoraPesquisar" layoutX="157.0" layoutY="170.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Pesquisar" />
+                              <Button fx:id="buttonEditoraCancelar" layoutX="281.0" layoutY="170.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Cancelar" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Autor">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="99.0" layoutY="93.0" prefHeight="260.0" prefWidth="365.0">
+                           <children>
+                              <Label fx:id="labelAutorDados" layoutX="55.0" layoutY="31.0" text="Dados do Autor" />
+                              <TextField fx:id="textAutorPrimeiroNome" layoutX="120.0" layoutY="65.0" prefHeight="34.0" prefWidth="245.0" />
+                              <Label fx:id="labelAutorPrimeiroNome" layoutX="20.0" layoutY="74.0" text="Primeiro Nome:" />
+                              <Button fx:id="buttonAutorIncluir" layoutX="45.0" layoutY="170.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Incluir" />
+                              <Button fx:id="buttonAutorPesquisar" layoutX="157.0" layoutY="170.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Pesquisar" />
+                              <Button fx:id="buttonAutorCancelar" layoutX="281.0" layoutY="170.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Cancelar" />
+                              <Label fx:id="labelAutorSegundoNome" layoutX="-3.0" layoutY="122.0" text="Sobrenome Completo:" />
+                              <TextField fx:id="textAutorSegundoNome" layoutX="120.0" layoutY="113.0" prefHeight="34.0" prefWidth="245.0" />
+                           </children>
+                        </Pane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Livro">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="155.0" layoutY="42.0" prefHeight="312.0" prefWidth="269.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="95.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="174.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="labelLivroIsbn" text="ISBN" />
+                              <Label fx:id="labelLivroTitulo" text="Titulo" GridPane.rowIndex="1" />
+                              <Label fx:id="labelLivroNumEdicao" text="Numero Edicao" GridPane.rowIndex="2" />
+                              <Label fx:id="labelLivroCopyright" text="Copyright" GridPane.rowIndex="3" />
+                              <Label fx:id="labelLivroArquivoImagem" text="Arquivo Imagem" GridPane.rowIndex="4" />
+                              <Label fx:id="labelLivroPreco" text="Preco" GridPane.rowIndex="5" />
+                              <Label fx:id="labelLivroEditora" text="Editora" GridPane.rowIndex="6" />
+                              <Label fx:id="labelLivroAutores" text="Autor(es)" GridPane.rowIndex="7" />
+                              <TextField fx:id="textLivroIsbn" GridPane.columnIndex="1" />
+                              <TextField fx:id="textLivroTitulo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="textLivroNumEdicao" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="textLivroCopyright" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="textLivroArquivoImagem" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="textLivroPreco" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <ComboBox fx:id="comboEditora" prefHeight="25.0" prefWidth="181.0" promptText="Selecione a editora" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <MenuButton fx:id="menuAutores" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" text="Selecione os autores" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="buttonLivroIncluir" layoutX="164.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Incluir" />
+                        <Button fx:id="buttonLivroCancelar" layoutX="365.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Cancelar" />
+                        <Button fx:id="buttonLivroPesquisar" layoutX="264.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Pesquisar" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Resultado Busca">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="listResultado" layoutX="54.0" layoutY="36.0" onMouseClicked="#handleMouseClick" prefHeight="360.0" prefWidth="454.0" />
+                        <Button fx:id="buttonBuscaTodos" layoutX="137.0" layoutY="405.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Listar todos" />
+                        <Button fx:id="buttonBuscaLimpar" layoutX="352.0" layoutY="405.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Limpar" />
+                        <Label fx:id="labelBuscaLivros" layoutX="54.0" layoutY="14.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Sair">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="buttonSair" layoutX="242.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Salvar e sair" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
