@@ -7,3 +7,7 @@ Aplicação Java que simula um sistema de cadastro e pesquisa de livros, editora
 ![Screenshot_4](https://user-images.githubusercontent.com/86082269/159177784-332ac198-a161-48d4-a8fd-55648d9b0390.png)
 ![Screenshot_5](https://user-images.githubusercontent.com/86082269/159177788-33120fb6-afeb-4d22-a2f5-9f7d76b56be2.png)
 ![Screenshot_6](https://user-images.githubusercontent.com/86082269/159177790-ca5bb68f-3f3e-499d-ad1a-b1ea60d22ffa.png)
+
+Diagrama de classes:
+![diagramaClassesCaio](https://user-images.githubusercontent.com/86082269/159274698-df2d1643-492c-4f72-a3ab-ec1396f0a028.png)
+
